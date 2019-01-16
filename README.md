@@ -2,7 +2,7 @@
 A repo of bash scripts 
 
 
-## Setting up Cron Job
+## Setting up Cron Job's for Scheduling
 Ensure environment path is included in order for cron environment to be same as user environment in order to leverae system level programmes. See the attached link for examples on how to set crontab for certain times [link](https://crontab.guru/examples.html) 
 .
     
