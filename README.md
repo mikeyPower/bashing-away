@@ -225,7 +225,26 @@ To find a file on your system we can use the locate. In this example, we are goi
 After executing all these commands are terminal can look very busy and hectic, this is way the clear command comes in handle. It simple takes us back to the start of the command prompt removing everyhing that was previously on the terminal.
     
     $ clear
+    
+Now if you are looking at downloading files straight from sites to your system look no further than the wget command.
 
+    $ wget www.mickpowers.com
+    --2019-10-14 20:57:31--  http://www.mickpowers.com/
+    Resolving www.mickpowers.com (www.mickpowers.com)... 35.173.69.207
+    Connecting to www.mickpowers.com (www.mickpowers.com)|35.173.69.207|:80... conne
+    HTTP request sent, awaiting response... 302 Moved Temporarily
+    Location: https://www.mickpowers.com/ [following]
+    --2019-10-14 20:57:31--  https://www.mickpowers.com/
+    Connecting to www.mickpowers.com (www.mickpowers.com)|35.173.69.207|:443... conn
+    HTTP request sent, awaiting response... 200 OK
+    Length: 21479 (21K) [text/html]
+    Saving to: ‘index.html’
+
+    index.html                                                                   100
+
+    2019-10-14 20:57:32 (4.75 MB/s) - ‘index.html’ saved [21479/21479]
+    $
+    
 ## Setting up Cron Job's for Scheduling
 
 To create or edit a crontab file run the following command:
