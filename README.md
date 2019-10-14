@@ -210,6 +210,17 @@ The head command does what you’d expect; it displays a fi le’s fi rst group 
     line9
     line10
     $
+
+To find a file on your system we can use the locate. In this example, we are going to display all the locations that the file "cv.pdf" is present. The -i will perform a case insensitive search:
+
+    $ locate -i cv.pdf
+    /home/michael/Desktop/cv.pdf
+    /home/michael/Desktop/cv.pdf.docx
+    /home/michael/Desktop/desk/cv.pdf
+    /home/michael/Documents/CV.pdf
+    /home/michael/Documents/cv.pdf
+    /home/michael/Downloads/cv.pdf.docx
+    $
     
 ## Setting up Cron Job's for Scheduling
 
