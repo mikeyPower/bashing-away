@@ -222,6 +222,10 @@ To find a file on your system we can use the locate. In this example, we are goi
     /home/michael/Downloads/cv.pdf.docx
     $
     
+After executing all these commands are terminal can look very busy and hectic, this is way the clear command comes in handle. It simple takes us back to the start of the command prompt removing everyhing that was previously on the terminal.
+    
+    $ clear
+
 ## Setting up Cron Job's for Scheduling
 
 To create or edit a crontab file run the following command:
