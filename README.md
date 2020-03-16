@@ -1,7 +1,10 @@
 # bashing-away
 A repo of bash scripts 
 
-## Basic Bash Shell Commands
+
+## Table of Contents
+
+## Change Directory
 To traverse a directory the cd (change directory) command is used:
     
     michael@server01:/usr/bin$ cd /var/log
@@ -13,6 +16,7 @@ To traverse a directory the cd (change directory) command is used:
 Just entering cd and enter will bring you to the home directory
 The pwd command displays the shell session’s current directory location, which is called the present working directory.
 
+## List Directory
 In order to the list a directory enter the ls (List command) command:
     
     $ ls
@@ -49,13 +53,15 @@ point (!):
     -rw-rw-r-- 1 michael michael 0 May 21 13:44 full
     $
 
+## Create a file
 To create a file you can use the touch command:
 
     $ touch test_one
     $ ls -l test_one
     -rw-rw-r-- 1 michael michael 0 May 21 14:17 test_one
     $
-  
+ 
+## Copy a file
 In order to copy a file the cp command uses two parameters — the source object and the
 destination object: cp source destination.
 
@@ -65,7 +71,7 @@ destination object: cp source destination.
     -rw-rw-r-- 1 michael michael 0 May 21 15:15 test_two
     $
     
-    
+ ## Move or Rename files   
  If you'd like to either move or rename files the mv command can be used:
  
     $ ls -li f?ll
@@ -101,7 +107,7 @@ You can also use mv to change a file’s location:
     ls: cannot access /home/michael/fzll: No such file or directory
     $
     
-
+## Delete a file
 To delete files the rm (removing) command is used:
 
     $ rm -i fall
@@ -116,7 +122,7 @@ about removing the fi le. The shell has no recycle bin or trashcan. After you re
 it’s gone forever. Therefore, a good habit is to always tack on the -i parameter to the rm
 command.
 
-
+## Create a new folder
 To create a new directory we can just use the mkdir command:
     
     $ mkdir New_Dir
@@ -124,6 +130,7 @@ To create a new directory we can just use the mkdir command:
     drwxrwxr-x 2 michael michael 4096 May 22 09:48 New_Dir
     $
 
+## Delete a folder
 To delete a directory we use the rmdir comand however this will only delete a directory that is empty:
 
     $ touch New_Dir/my_file
@@ -151,12 +158,14 @@ directory, remove the files, and then remove the directory itself:
     ls: cannot access My_Dir: No such file or directory
     $
 
+## Describe a file
 The file command is a handy little to have around. It can peak inside of a file and determine just what kind of file it is:
     
     $ file my_file
     my_file: ASCII text
     $
     
+ ## View contents of file
  To view the contents of a file the cat command can be used:
  
     $ cat test1
@@ -169,7 +178,7 @@ For large files, the cat command can be somewhat annoying. The text in the fi le
 quickly scrolls off the display without stopping. Fortunately, we have a simple way to solve
 this problem. To solve this there is the more and less command.
 
-
+## View end of file
 To view parts of a file we can use the tail command, which by default shows us the last 10 lines of the file:
 
     le’s last 10 lines:
@@ -195,6 +204,7 @@ command:
     Last line - line20
     $
     
+## View start of file
 The head command does what you’d expect; it displays a fi le’s fi rst group of lines (the fi le’s
 “head”). By default, it displays the fi rst 10 lines of text:
     
@@ -211,6 +221,7 @@ The head command does what you’d expect; it displays a fi le’s fi rst group 
     line10
     $
 
+## Locate a file
 To find a file on your system we can use the locate. In this example, we are going to display all the locations that the file "cv.pdf" is present. The -i will perform a case insensitive search:
 
     $ locate -i cv.pdf
@@ -222,10 +233,12 @@ To find a file on your system we can use the locate. In this example, we are goi
     /home/michael/Downloads/cv.pdf.docx
     $
     
+## Clear Terminal
 After executing all these commands are terminal can look very busy and hectic, this is way the clear command comes in handle. It simple takes us back to the start of the command prompt removing everyhing that was previously on the terminal.
     
     $ clear
-    
+ 
+## Download a file from sites 
 Now if you are looking at downloading files straight from sites to your system look no further than the wget command.
 
     $ wget www.mickpowers.com
