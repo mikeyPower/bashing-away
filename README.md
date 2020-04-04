@@ -282,5 +282,42 @@ Now if we want to get some information such as the size of the file we can execu
 Which will output the following for example to stdout, giving us size, modified date and time, file or folder name and owner of file and its permission.
 
     -rw------- 1 root root 1.1M Apr  4 14:50 <file>
+    
+This is good enough for a quick and easy way to get last modified time of the file along with it's size but say we wanted to get the creation time of the file. In order to accomplish that we first need to get the index number of the file.
+
+    $ ls -i file
+    25035952 file
+    
+Now we have the index number of the file we meed to know on which partition your directory is saved by running the following.
+
+    $ df -h
+    Filesystem      Size  Used Avail Use% Mounted on
+    udev            1.7G     0  1.7G   0% /dev
+    tmpfs           339M  1.5M  338M   1% /run
+    /dev/sda2       454G   13G  419G   3% /
+    tmpfs           1.7G  179M  1.5G  11% /dev/shm
+    tmpfs           5.0M     0  5.0M   0% /run/lock
+    tmpfs           1.7G     0  1.7G   0% /sys/fs/cgroup
+    /dev/sda1       511M  5.0M  507M   1% /boot/efi
+    tmpfs           339M   12K  339M   1% /run/user/0
+
+Finally we can now see when the file was created along with it's last access and modified time.
+
+    $ sudo debugfs -R 'stat <25035952>' /dev/sda2
+    Inode: 25035952   Type: regular    Mode:  0755   Flags: 0x80000
+    Generation: 3370929681    Version: 0x00000000:00000001
+    User:     0   Group:     0   Project:     0   Size: 203
+    File ACL: 0
+    Links: 1   Blockcount: 8
+    Fragment:  Address: 0    Number: 0    Size: 0
+    ctime: 0x5e888c7f:aee49184 -- Sat Apr  4 14:32:47 2020
+    atime: 0x5e888c84:2b4a7d4c -- Sat Apr  4 14:32:52 2020
+    mtime: 0x5e888c7f:aee49184 -- Sat Apr  4 14:32:47 2020
+    crtime: 0x5e872d42:01b703fc -- Fri Apr  3 13:34:10 2020
+    Size of extra inode fields: 32
+    Inode checksum: 0xc1fd55de
+
+
+
 
 
