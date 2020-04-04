@@ -271,3 +271,16 @@ Ensure environment path is included in order for cron environment to be same as 
     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
     0 * * * * /home/usr/example_script.sh
+    
+    
+## File details in readable form
+
+Now if we want to get some information such as the size of the file we can execute the following command.
+
+    ls -lh <file>
+    
+Which will output the following for example to stdout, giving us size, modified date and time, file or folder name and owner of file and its permission.
+
+    -rw------- 1 root root 1.1M Apr  4 14:50 <file>
+
+
