@@ -317,7 +317,25 @@ Finally we can now see when the file was created along with it's last access and
     Size of extra inode fields: 32
     Inode checksum: 0xc1fd55de
 
+## How long is system running?
 
+To find out how long the sytem has been up and running for we can execute the following linux command.
+
+	$ uptime
+	09:11:22 up 32 min,  1 user,  load average: 0.00, 0.03, 0.22
+
+## Current working directory
+
+the pwd command the current working directory you are in.
+
+	$ pwd
+	/root/bashing-away
+
+## Compress a file
+
+In order to compress a file and keep the original we can execute the following command.
+
+	$ gzip -k file
 
 
 
