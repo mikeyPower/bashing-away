@@ -338,4 +338,10 @@ In order to compress a file and keep the original we can execute the following c
 	$ gzip -k file
 
 
+## Uncrompress a ZIP file
+
+In order to uncompress a file we can execute the following command.
+
+	$ unzip file.zip
+
 
