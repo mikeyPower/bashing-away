@@ -345,3 +345,25 @@ In order to uncompress a file we can execute the following command.
 	$ unzip file.zip
 
 
+## sed
+
+
+## awk
+
+
+## grep
+
+
+## Change file permissions
+
+chmod
+
+## System Information
+
+Uname command displays important information about the system such as — Kernel name, Host name, Kernel release number,
+Processor type, etc.,
+
+Sample uname output from a Ubuntu laptop is shown below.
+
+	$ uname -a
+	Linux kali 5.4.0-kali4-amd64 #1 SMP Debian 5.4.19-1kali1 (2020-02-17) x86_64 GNU/Linux
