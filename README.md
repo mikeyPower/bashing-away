@@ -367,3 +367,48 @@ Sample uname output from a Ubuntu laptop is shown below.
 
 	$ uname -a
 	Linux kali 5.4.0-kali4-amd64 #1 SMP Debian 5.4.19-1kali1 (2020-02-17) x86_64 GNU/Linux
+
+## Groups
+
+Linux has built in functions to determine groups as well as manage the permissions of the groups.
+
+	$ groups
+	root
+
+## History
+
+In order to view the commands that a user has inputted previously. By default it will show the last 500 commands but we can limit this even less.
+
+	$ history 10
+	1169  history 10
+	1170  ls
+	1171  cd 
+	1172  mkdir tmp
+ 	1173  ls
+ 	1174  cd bashing-away/
+	1175  ifconfig
+ 	1176  ls
+ 	1177  nano README.md 
+ 	1178  history 10
+
+
+## Manual Command
+
+The man command displays the ‘man pages’ or user manual of a command. This can be helpful in order to determine commands for certain packages within Linux.
+
+	$ man nmap
+	NMAP(1)                                                                Nmap Reference Guide                                                               NMAP(1)
+
+	NAME
+       	nmap - Network exploration tool and security / port scanner
+
+	SYNOPSIS
+       	nmap [Scan Type...] [Options] {target specification}
+
+	DESCRIPTION
+       	Nmap (“Network Mapper”) is an open source tool for network exploration and security auditing. It was designed to rapidly scan large networks, although it
+       	works fine against single hosts. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application
+       	name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use,
+       	and dozens of other characteristics. While Nmap is commonly used for security audits, many systems and network administrators find it useful for routine
+       	tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime.
+
