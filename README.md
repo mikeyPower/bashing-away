@@ -16,6 +16,11 @@ To traverse a directory the cd (change directory) command is used:
 Just entering cd and enter will bring you to the home directory
 The pwd command displays the shell session’s current directory location, which is called the present working directory.
 
+Now to go back one directory we can enter cd .. or cd - as shown below.
+
+	michael@server01:/var/log$ cd -
+	michael@server01:/var$
+
 ## List Directory
 In order to the list a directory enter the ls (List command) command:
     
