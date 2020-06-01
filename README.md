@@ -417,3 +417,18 @@ The man command displays the ‘man pages’ or user manual of a command. This c
        	and dozens of other characteristics. While Nmap is commonly used for security audits, many systems and network administrators find it useful for routine
        	tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime.
 
+
+
+## Burn ISO image to USB
+
+First thing we need to do is find the location of the usb. To do this we will enter the following command which will list the filesystem to gather information.
+
+	$ lsblk
+
+The file systeme we are looking for is sdb which is the identifier for the USB. Now that we have that we can go to the directory to where the iso image file is downloaded and burn it to the usb.
+
+	$ sudo dd bs=4M if=ubuntu-19.04-desktop-amd64.iso of=/dev/sdb
+	159+1 records in
+	159+1 records out
+	670347264 bytes (670MB) copied 128.558 s, 5.2 MB/s
+ 
