@@ -432,3 +432,28 @@ The file systeme we are looking for is sdb which is the identifier for the USB. 
 	159+1 records out
 	670347264 bytes (670MB) copied 128.558 s, 5.2 MB/s
  
+ ## Sort data
+ 
+ In order to sort a file numerically we can use the sort command with the -n option as below:
+ 
+  	$ cat file2
+ 	1
+ 	10
+ 	100
+	145
+ 	2
+ 	3
+ 	45
+ 	75
+ 	$ sort -n file2
+ 	1
+ 	2
+ 	3
+ 	10
+ 	45
+ 	75
+ 	100
+ 	145
+ 	$
+
+The sort command can also be used to sort by a file alphabetically or by month using the -M parameter. As with any Linux command in order to find out more bring up the man pages for further options.
